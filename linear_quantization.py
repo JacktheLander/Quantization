@@ -91,6 +91,6 @@ def plot_quantization_errors(original_tensor, quantized_tensor, dequantized_tens
 
 plot_quantization_errors(test_tensor, quantized_tensor, dequantized_tensor)
 
-print("Error:", dequantized_tensor - test_tensor)
-print("MSE:", (dequantized_tensor - test_tensor).square())
-print("RMSE:", (dequantized_tensor - test_tensor).square().mean())
+print("Error Tensor:", dequantized_tensor - test_tensor)
+print("Squared Error Tensor:", (dequantized_tensor - test_tensor).square())
+print("MSE:", (dequantized_tensor - test_tensor).square().mean())
