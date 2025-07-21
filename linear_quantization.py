@@ -8,6 +8,7 @@ import torch
 
 ## Linear Quantization uses a Scale and Zero Point ##
 
+# r = s(q-z)
 def linear_q_with_scale_and_zero_point(
     tensor, scale, zero_point, dtype = torch.int8):
 
@@ -40,7 +41,7 @@ quantized_tensor = linear_q_with_scale_and_zero_point(
 print(quantized_tensor)
 
 
-## Dequantization ##
+## Dequantization is the Inverse Function ##
 
 dequantized_tensor = scale * (quantized_tensor.float() - zero_point)
 
