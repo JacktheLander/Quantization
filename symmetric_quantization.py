@@ -2,7 +2,7 @@
 
 import torch
 from asymmetric_quantization import linear_q_with_scale_and_zero_point
-from linear_quantization import plot_quantization_errors, linear_dequantization, 
+from linear_quantization import plot_quantization_errors, linear_dequantization
 
 def get_q_scale_symmetric(tensor, dtype=torch.int8):
     r_max = tensor.abs().max().item()
