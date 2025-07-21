@@ -1,5 +1,7 @@
 # Quantization
 
+QAI Hub - Qualcomm's open-source library used to quantize models for a specific chipset
+
 Linear Quantization - Simple and easy to use
 
 Asymmetric Quantization - Good for activations that aren't centered at zero, because it uses the range dynamically
