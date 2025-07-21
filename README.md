@@ -10,4 +10,4 @@ Symmetric Quantization - Centered at zero, but extremely fast due to the simple 
 
 Per-Channel Quantization - Rather than quantizing the whole tensor we can quantize each output specifically for the highest accuracy with minimal performance drop
 
-Per-Group Quantization - Best for maintaining accuracy, but only improves memory slightly so only for training at scale like LLMs
+Per-Group Quantization - Best for maintaining precision, improves memory slightly, really for training at scale like LLMs
