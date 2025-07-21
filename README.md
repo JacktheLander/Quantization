@@ -1,0 +1,9 @@
+# Quantization
+
+Linear Quantization - Simple and easy to use
+
+Asymmetric Quantization - Good for activations that aren't centered at zero, because it uses the range dynamically
+
+Symmetric Quantization - Centered at zero, but extremely fast due to the simple math and low memory usage
+
+Per-Channel Quantization - Rather than quantizing the whole tensor we can quantize across rows or columns specifically
