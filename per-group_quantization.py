@@ -13,9 +13,7 @@ def linear_q_symmetric_per_group(tensor, group_size, dtype=torch.int8):
     
     tensor = tensor.view(-1, group_size)
     
-    quantized_tensor, scale = linear_q_symmetric_per_channel(
-                                tensor, dim=0, dtype=dtype)
-    
+    quantized_tensor, scale = linear_q_symmetric_per_channel(tensor, dim=0, dtype=dtype)
     quantized_tensor = quantized_tensor.view(t_shape)
     
     return quantized_tensor, scale
@@ -25,9 +23,7 @@ def linear_dequantization_per_group(quantized_tensor, scale, group_size):
     q_shape = quantized_tensor.shape
     quantized_tensor = quantized_tensor.view(-1, group_size)
     
-    dequantized_tensor = linear_dequantization(quantized_tensor, 
-                                               scale, 0)
-    
+    dequantized_tensor = linear_dequantization(quantized_tensor, scale, 0)
     dequantized_tensor = dequantized_tensor.view(q_shape)
     
     return dequantized_tensor
