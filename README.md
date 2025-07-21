@@ -9,3 +9,5 @@ Asymmetric Quantization - Good for activations that aren't centered at zero, bec
 Symmetric Quantization - Centered at zero, but extremely fast due to the simple math and low memory usage
 
 Per-Channel Quantization - Rather than quantizing the whole tensor we can quantize each output specifically for the highest accuracy with minimal performance drop
+
+Per-Group Quantization - Best for maintaining accuracy, but only improves memory slightly for LLMs training at scale
