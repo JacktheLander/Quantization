@@ -74,7 +74,7 @@ def postprocess(output_tensor, input_image_pil):
 
 # Run sample output through the model
 test_output_fp32 = model(test_sample)
-test_output_fp32
+print(test_output_fp32)
 
 postprocess(test_output_fp32, test_sample_pil)
 
