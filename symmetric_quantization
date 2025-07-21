@@ -1,4 +1,4 @@
-### Finding the Optimal Scale and Zero Point for Linear Quantization ###
+### Finding the Scale and Zero Point for Linear Quantization ###
 
 import seaborn as sns
 import matplotlib.pyplot as plt
