@@ -1,3 +1,5 @@
+### Performing Quantization on Each Output Dimension Separately ###
+
 import torch
 from symmetric_quantization import get_q_scale_symmetric
 from asymmetric_quantization import linear_q_with_scale_and_zero_point
