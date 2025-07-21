@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from matplotlib.colors import ListedColormap
 import torch
 
-## Quantization with a Random Scale and Zero Point ##
+## Linear Quantization uses a Scale and Zero Point ##
 
 def linear_q_with_scale_and_zero_point(
     tensor, scale, zero_point, dtype = torch.int8):
@@ -40,7 +40,7 @@ quantized_tensor = linear_q_with_scale_and_zero_point(
 print(quantized_tensor)
 
 
-## Dequantization with a Random Scale and Zero Point ##
+## Dequantization ##
 
 dequantized_tensor = scale * (quantized_tensor.float() - zero_point)
 
