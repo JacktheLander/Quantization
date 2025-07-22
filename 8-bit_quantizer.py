@@ -57,8 +57,7 @@ class W8A16LinearLayer(nn.Module):
         scales = w_fp32.abs().max(dim=-1).values / 127
         scales = scales.to(weights.dtype)
 
-        int8_weights = torch.round(weights
-                        /scales.unsqueeze(1)).to(torch.int8)
+        int8_weights = torch.round(weights/scales.unsqueeze(1)).to(torch.int8)
 
         self.int8_weights = int8_weights
         self.scales = scales
