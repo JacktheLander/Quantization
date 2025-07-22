@@ -9,9 +9,7 @@ random_hs = torch.randn((1, 16), dtype=torch.bfloat16)
 scales = torch.randn((1, 32), dtype=torch.bfloat16)
 bias = torch.randn((1, 32), dtype=torch.bfloat16)
 
-# Test the complete 16-bit activation
-print(F.linear(random_hs, random_int8.to(random_hs.dtype)))
-print(F.linear(random_hs, random_int8.to(random_hs.dtype)) * scales)
+# The typical forward pass that we aim to quantize
 print((F.linear(random_hs, random_int8.to(random_hs.dtype)) * scales) + bias)
 
 
