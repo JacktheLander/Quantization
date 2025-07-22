@@ -13,8 +13,8 @@ def replace_linear_with_target(module, target_class, module_name_to_exclude):
             old_bias = child.bias
 
             new_module = target_class(child.in_features, child.out_features, old_bias is not None, child.weight.dtype)
-            
             setattr(module, name, new_module)
+            
             if old_bias is not None:
               getattr(module, name).bias = old_bias
         else:
