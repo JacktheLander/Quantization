@@ -1,4 +1,4 @@
-### Applying Quantization to Weights in a Forward Pass ###
+### Applying Quantization to Weights in an Activation ###
 import torch
 
 from symmetric_quantization import get_q_scale_symmetric, linear_q_symmetric
