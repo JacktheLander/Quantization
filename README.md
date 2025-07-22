@@ -12,4 +12,4 @@ Per-Channel Quantization - Rather than quantizing the whole tensor we can quanti
 
 Per-Group Quantization - Best for maintaining precision, improves memory slightly, really for training at scale like LLMs
 
-Weight Quantization - Only quantizing the weights and not the activation saves memory, while maintaining stable inference
+Inference Quantization - Only quantizing the weights and not the activation saves memory, while maintaining stable inference
