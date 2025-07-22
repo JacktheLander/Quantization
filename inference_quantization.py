@@ -1,4 +1,4 @@
-### Applying W8A32 Quantization ###
+### Applying Quantization to Weights in a Forward Pass ###
 import torch
 
 from symmetric_quantization import get_q_scale_symmetric, linear_q_symmetric
