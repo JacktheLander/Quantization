@@ -12,4 +12,8 @@ Per-Channel Quantization - Rather than quantizing the whole tensor we can quanti
 
 Per-Group Quantization - Best for maintaining precision, improves memory slightly, really for training at scale like LLMs
 
-Inference Quantization - Using quantization for the weights to perform an accelerated forward pass in the neural network
+Inference Quantization - Using quantization for the weights in an activation
+
+8-bit Quantizer - Performs an accelerated forward pass in the neural network
+
+Quantize Layers - Replaces the linear layers in a model with quantized layers
