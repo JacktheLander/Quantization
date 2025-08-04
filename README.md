@@ -17,3 +17,5 @@ Inference Quantization - Using quantization for the weights in an activation
 8-bit Quantizer - Performs an accelerated forward pass in the neural network
 
 Quantize Layers - Replaces the linear layers in a model with quantized layers
+
+Quantizing Models - Testing the Quantizer on an open-source LLM and Object Detection model, we see significant memory reduction with the same performance
