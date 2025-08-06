@@ -1,0 +1,1 @@
+It is rewarding to see the quantizer successfully modifying the LLM and producing results of similar quality. However, TinyLlama hallucinates heavily I now need to run the inference on gpu so that we can try some larger models o test how significantly of an improvement quantization can make.
