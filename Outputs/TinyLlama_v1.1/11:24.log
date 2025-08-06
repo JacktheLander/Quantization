@@ -1,0 +1,64 @@
+prompt: Do not go gentle into that good night, Old age should burn and rave at close of day; Rage, rage against the dying of the light.
+[{'generated_text': 'Do not go gentle into that good night, Old age should burn and rave at close of day; Rage, rage against the dying of the light. Good night, and pleasant dreams, Good night, and pleasant dreams, Good night, and pleasant dreams. Good, night, and pleasant dreams. Good, night, and pleasant dreams, Good night, and pleasant dreams, Good night, and pleasant dreams. Good night, and pleasant dreams, Good night, and pleasant dreams, Good night, and pleasant dreams, Good night, and pleasant dreams. Good night, and pleasant dreams, Good night, and pleasant dreams, Good night, and pleasant dreams, Good night, and pleasant dreams. Good night, and pleasant dreams, Good night, and pleasant dreams, Good night, and pleasant dreams, Good night, and'}]
+Model before:
+
+ LlamaForCausalLM(
+  (model): LlamaModel(
+    (embed_tokens): Embedding(32000, 2048)
+    (layers): ModuleList(
+      (0-21): 22 x LlamaDecoderLayer(
+        (self_attn): LlamaAttention(
+          (q_proj): Linear(in_features=2048, out_features=2048, bias=False)
+          (k_proj): Linear(in_features=2048, out_features=256, bias=False)
+          (v_proj): Linear(in_features=2048, out_features=256, bias=False)
+          (o_proj): Linear(in_features=2048, out_features=2048, bias=False)
+        )
+        (mlp): LlamaMLP(
+          (gate_proj): Linear(in_features=2048, out_features=5632, bias=False)
+          (up_proj): Linear(in_features=2048, out_features=5632, bias=False)
+          (down_proj): Linear(in_features=5632, out_features=2048, bias=False)
+          (act_fn): SiLU()
+        )
+        (input_layernorm): LlamaRMSNorm((2048,), eps=1e-05)
+        (post_attention_layernorm): LlamaRMSNorm((2048,), eps=1e-05)
+      )
+    )
+    (norm): LlamaRMSNorm((2048,), eps=1e-05)
+    (rotary_emb): LlamaRotaryEmbedding()
+  )
+  (lm_head): Linear(in_features=2048, out_features=32000, bias=False)
+)
+Do not go gentle into that good night, Old age should burn and rave at close of day; Rage, rage against the dying of the light. The light shall be on you. The light shall not be on you. Rage in the face of the light, the light is on the other side. But here's the thing.
+The light is on the other side. And it's the only thing that matters. The light is on the other side. And it's the only thing that matters.
+And here's the thing.
+The light is on the other side. And it's the only thing that matters.
+The light is on the other side, the light is on the other side, and it's the only thing that matters.
+And here's the thing. The light is on the other side, the light is on
+Model after:
+
+ LlamaForCausalLM(
+  (model): LlamaModel(
+    (embed_tokens): Embedding(32000, 2048)
+    (layers): ModuleList(
+      (0-21): 22 x LlamaDecoderLayer(
+        (self_attn): LlamaAttention(
+          (q_proj): W8A16LinearLayer()
+          (k_proj): W8A16LinearLayer()
+          (v_proj): W8A16LinearLayer()
+          (o_proj): W8A16LinearLayer()
+        )
+        (mlp): LlamaMLP(
+          (gate_proj): W8A16LinearLayer()
+          (up_proj): W8A16LinearLayer()
+          (down_proj): W8A16LinearLayer()
+          (act_fn): SiLU()
+        )
+        (input_layernorm): LlamaRMSNorm((2048,), eps=1e-05)
+        (post_attention_layernorm): LlamaRMSNorm((2048,), eps=1e-05)
+      )
+    )
+    (norm): LlamaRMSNorm((2048,), eps=1e-05)
+    (rotary_emb): LlamaRotaryEmbedding()
+  )
+  (lm_head): Linear(in_features=2048, out_features=32000, bias=False)
+)
