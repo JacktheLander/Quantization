@@ -1,4 +1,4 @@
-# Quantization - Reduce memory usage by 40% during inference!
+# Quantization - Reduce memory usage by >40% during inference!
 
 QAI Hub - Qualcomm's open-source library used to quantize models for a specific chipset
 
